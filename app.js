@@ -46,10 +46,10 @@ app.use('/', wechat(config, function (req, res, next) {
     // 回复高富帅(图文回复)
     res.reply([
       {
-        title: '你来我家接我吧',
-        description: '这是女神与高富帅之间的对话',
-        picurl: 'http://nodeapi.cloudfoundry.com/qrcode.jpg',
-        url: 'http://nodeapi.cloudfoundry.com/'
+        title: 'test',
+        description: 'hello world',
+        picurl: 'http://img3.douban.com/lpic/s9117507.jpg',
+        url: 'http://www.github.com/'
       }
     ]);
   }
