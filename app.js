@@ -46,7 +46,7 @@ app.use('/', wechat(config, function (req, res, next) {
     // 回复高富帅(图文回复)
     res.reply([
       {
-        title: 'test',
+        title: message.FromUserName,
         description: 'hello world',
         picurl: 'http://img3.douban.com/lpic/s9117507.jpg',
         url: 'http://www.github.com/'
