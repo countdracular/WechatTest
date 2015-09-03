@@ -49,7 +49,7 @@ app.use('/', wechat(config, function (req, res, next) {
         title: message.FromUserName,
         description: 'hello world',
         picurl: 'http://img3.douban.com/lpic/s9117507.jpg',
-        url: 'http://www.github.com/'
+        url: 'http://52.27.77.52/map/'
       }
     ]);
   }
