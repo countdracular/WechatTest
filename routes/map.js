@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET map page lizikuan. */
 router.get('/map', function(req, res, next) {
-    res.render('map', { title: 'Lizikuan map'});
+    res.render('map');
 });
 
 module.exports = router;
