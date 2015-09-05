@@ -50,7 +50,7 @@ app.use('/', wechat(config, function (req, res, next) {
     res.reply([
       {
         title: "Touch to open Gaode Map. ",
-        description: message.content,
+        description: message.Content,
         picurl: "http://img3.douban.com/lpic/s9117507.jpg",
         url: "http://52.27.77.52/wxjssdktest/"
       }
