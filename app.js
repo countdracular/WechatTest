@@ -46,15 +46,15 @@ app.use('/', wechat(config, function (req, res, next) {
     });
   } else {
     // 回复高富帅(图文回复)
-    res.reply(JSON.stringify(message));
-    res.reply([
-      {
-        title: "Touch to open Gaode Map. ",
-        description: message.Content,
-        picurl: "http://img3.douban.com/lpic/s9117507.jpg",
-        url: "http://52.27.77.52/wxjssdktest/"
-      }
-    ]);
+    res.reply(JSON.stringify(message) + " \nmessage.Content: " + message.Content);
+    //res.reply([
+    //  {
+    //    title: "Touch to open Gaode Map. ",
+    //    description: message.Content,
+    //    picurl: "http://img3.douban.com/lpic/s9117507.jpg",
+    //    url: "http://52.27.77.52/wxjssdktest/"
+    //  }
+    //]);
   }
 }));
 
