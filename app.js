@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var map = require('./routes/map');
+var wxjssdktest = require('./routes/wxjssdktest');
 
 var app = express();
 
@@ -47,10 +48,10 @@ app.use('/', wechat(config, function (req, res, next) {
     // 回复高富帅(图文回复)
     res.reply([
       {
-        title: message.FromUserName,
+        title: 'You said: ' + message.content,
         description: 'hello world',
         picurl: 'http://img3.douban.com/lpic/s9117507.jpg',
-        url: 'http://52.27.77.52/map/'
+        url: 'http://52.27.77.52/wxjssdktest/'
       }
     ]);
   }
@@ -70,6 +71,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/map', map);
+app.use('/wxjssdktest', wxjssdktest);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

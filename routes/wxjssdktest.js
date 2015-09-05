@@ -1,13 +1,12 @@
 /**
- * Created by Administrator on 2015/9/3.
+ * Created by Administrator on 2015/9/5.
  */
 var express = require('express');
 var router = express.Router();
 
-/* GET map page lizikuan. */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('map');
+    res.render('wxjssdktest');
 });
 
 module.exports = router;
-
