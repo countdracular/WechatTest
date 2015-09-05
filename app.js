@@ -46,7 +46,7 @@ app.use('/', wechat(config, function (req, res, next) {
     });
   } else {
     // 回复高富帅(图文回复)
-    res.reply(JSON.stringify(message) + " \nmessage.Content: " + message.Content);
+    res.reply("message: \n" + JSON.stringify(message) + " \nmessage.Content: " + message.Content);
     //res.reply([
     //  {
     //    title: "Touch to open Gaode Map. ",
