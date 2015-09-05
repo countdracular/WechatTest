@@ -48,7 +48,7 @@ app.use('/', wechat(config, function (req, res, next) {
     // 回复高富帅(图文回复)
     res.reply([
       {
-        title: "You said: " + message.content.toString(),
+        title: "You said: " + message.toString(),
         description: 'hello world',
         picurl: "http://img3.douban.com/lpic/s9117507.jpg",
         url: "http://52.27.77.52/wxjssdktest/"
