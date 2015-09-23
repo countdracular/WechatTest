@@ -21,6 +21,7 @@ var config = {
 app.use(express.query());
 app.use('/', wechat(config, function (req, res, next) {
   // 微信输入信息都在req.weixi
+  var message=req.weixin;
     // 回复高富帅(图文回复)
     res.reply([
       {
