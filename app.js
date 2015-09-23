@@ -19,7 +19,19 @@ var config = {
 };
 
 app.use(express.query());
-
+app.use('/', wechat(config, function (req, res, next) {
+  // 微信输入信息都在req.weixi
+  var message=req.weixin;
+    // 回复高富帅(图文回复)
+    res.reply([
+      {
+        title: message.FromUserName,
+        description: 'hello world',
+        picurl: 'http://img3.douban.com/lpic/s9117507.jpg',
+        url: 'http://52.27.77.52/map/'
+      }
+    ])
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +45,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
 app.use('/users', users);
 app.use('/map', map);
 //foo
